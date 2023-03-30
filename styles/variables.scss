@@ -1,0 +1,31 @@
+$primary-color: #0089BF;
+$secondary-color: #072A40;
+$grey-color: #838fa0;
+$font-color: #3e4651;
+$kinda-white: #fcfcfd;
+
+$radii: (
+  'small': 8px,
+  'medium': 12px,
+  'large': 20px,
+);
+
+$sizes: (
+  'small': 8px,
+  'medium': 12px,
+  'large': 20px,
+);
+
+$shadows: (
+  'subtle': rgba(0, 0, 0, 0.12) 0px 3px 8px,
+  'normal': rgba(0, 0, 0, 0.24) 0px 3px 8px,
+  'intense': (
+    rgba(0, 0, 0, 0.16) 0px 0px 12px 10px
+  ),
+);
+
+@mixin card-shape($radius: 'small', $shadow: 'subtle', $overflow: visible) {
+  border-radius: map-get($radii, $radius);
+  box-shadow: map-get($shadows, $shadow);
+  overflow: $overflow;
+}
